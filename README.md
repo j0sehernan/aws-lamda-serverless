@@ -109,6 +109,14 @@ Now run the command:
 npm run deploy
 ```
 
+## API in AWS 📦
+
+```
+https://www.getpostman.com/collections/14248948ab3b1033f221
+https://drive.google.com/file/d/1mz__gEMgw8EvWGr3_VjoIN5RPy-UwEqm/view?usp=sharing
+```
+
+
 ## Built with 🛠️
 
 * [Serverless](https://www.serverless.com/)
