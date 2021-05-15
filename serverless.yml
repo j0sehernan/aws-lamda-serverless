@@ -1,0 +1,72 @@
+service: aws-lambda-api-service
+frameworkVersion: "2.41.2"
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  stage: dev
+  profile: deploy-aws
+  region: us-west-2
+plugins:
+  - serverless-offline
+functions:
+  authorlist:
+    handler: handlers/AuthorHandler.list
+    events:
+      - http:
+         method: get
+         path: /authors
+  authorget:
+    handler: handlers/AuthorHandler.get
+    events:
+      - http:
+         method: get
+         path: /authors/{id}
+  authorcreate:
+    handler: handlers/AuthorHandler.create
+    events:
+      - http:
+         method: post
+         path: /authors
+  authorupdate:
+    handler: handlers/AuthorHandler.update
+    events:
+      - http:
+         method: put
+         path: /authors/{id}
+  authordelete:
+    handler: handlers/AuthorHandler.delete
+    events:
+      - http:
+         method: delete
+         path: /authors/{id}
+  publicationlist:
+    handler: handlers/PublicationHandler.list
+    events:
+      - http:
+         method: get
+         path: /publications
+  publicationget:
+    handler: handlers/PublicationHandler.get
+    events:
+      - http:
+         method: get
+         path: /publications/{id}
+  publicationcreate:
+    handler: handlers/PublicationHandler.create
+    events:
+      - http:
+         method: post
+         path: /publications
+  publicationupdate:
+    handler: handlers/PublicationHandler.update
+    events:
+      - http:
+         method: put
+         path: /publications/{id}
+  publicationdelete:
+    handler: handlers/PublicationHandler.delete
+    events:
+      - http:
+         method: delete
+         path: /publications/{id}

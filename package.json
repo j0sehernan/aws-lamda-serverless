@@ -1,0 +1,29 @@
+{
+  "name": "aws-lambda-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "handler.js",
+  "scripts": {
+    "tsc": "tsc",
+    "invoke": "sls invoke local -f",
+    "deploy": "sls deploy --stage dev --verbose",
+    "test": "mocha test/**/*"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.3.4",
+    "mocha": "^8.4.0",
+    "pg": "^8.6.0",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^6.6.2",
+    "sequelize-cli": "^6.2.0",
+    "serverless": "^2.41.2",
+    "sinon": "^10.0.0"
+  },
+  "devDependencies": {
+    "serverless-offline": "^7.0.0",
+    "supertest": "^6.1.3"
+  }
+}
